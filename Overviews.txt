@@ -1,0 +1,88 @@
+Overview of the AWS Platform
+
+AWS Global Infrastructure
+  A Region is a geographical area.
+  Each Region consists of 2 or more Availability Zones.
+  An Availability Zone (AZ) is Simply a Data Center.
+  Edge Locations Are CDN End Points for CloudFront.
+  There are many more Edge Locations than Regions.
+
+Networking & Content Delivery
+  VPC: Virtual Private Cloud; virtual data center, need to build a VPC from memory, really important
+  Route53: amazon's highly scaleable DNS service
+  Cloud Front: used s CDN to distribute content around the world
+  Direct Connect: instead of going through Internet, going through dedicated telephone line to AWS
+    because of security reasons, also reliable connection
+
+Compute
+  EC2: Elastic Compute Cloud; virtual machines in the cloud
+  EC2 Container Service
+  Elastic Beanstalk: deploy code to AWS; designed to run a developer's code on an infrastructure that
+    is automatically provisioned to host that code
+  Lambda: build echo using Lambda; speak to echo is actually speak to Lambda; run code without having to
+    worry about provisioning any underlying resources such as virtual machines, databases, etc
+  Lightsail
+
+Databases
+  RDS: offers the following database engines: SQL, MySQL, MariaDB, PostgreSQL, Aurora, Oracle
+  DynamoDB: NoSQL database, super high performance
+  Redshift: used primarily for data warehousing
+  Elasticache
+
+Migration
+  Snowball
+  DMS: Database Migration Service
+  Service Migration Service (SMS)
+
+Analytics
+  Athena
+  EMR: big data process
+  Cloud Search: search engine
+  Elastic Search: search engine
+  Kinesis: streaming and analyzing data in real time, collating large amounts of data streamed from multiple sources
+  Data Pipeline
+  Quick Sight
+
+Security & Identity
+  IAM: really important, add users to your AWS account and set password rotation policies for these new users
+  Inspector: agent, does security
+  Certificate Manager
+  Directory Service
+  WAF: application level protection, application layer
+  Artifacts: documents, certifications
+
+Management Tools
+  Cloud Watch: monitor
+  Cloud Formation: documents describe AWS environments, turn infrastructure into codes
+  Cloud Trail: supply auditors with logs detailing the individual users that provision specific resources on your AWS platform
+  Opsworks: you need a configuration management service that enables your system administrators to configure and operate
+    your web applications using Chef
+  Config
+  Trusted Advisor
+
+Application Services
+  Step Functions
+  SWF: important
+  API Gateway
+  AppStream
+  Elastic Transcoder: your digital media agency needs to convert their media files in to different formats to suit different devices.
+
+Developer Tools
+  CodeCommit
+  CodeBuild
+  CodeDeploy
+  CodePipeline
+
+Messaging
+  SNS
+  SQS: queue
+  SES: simple email services
+
+Elastic Map Reduce: designed to assist you in processing large data sets
+
+Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application
+health monitoring based on the code you upload to it, where CloudFormation is an automated provisioning engine designed to
+deploy entire cloud environments via a JSON script
+
+S3: offers durable, available storage for flat files
+Glacier: the best choice for long term data archival
